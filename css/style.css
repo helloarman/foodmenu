@@ -199,7 +199,7 @@
 .content .content-title{
     position: absolute;
     bottom: -28px;
-    background-color: #463FAF;
+    background-color: var(--theme_color);
     height: 60px;
     width: 250px;
     border-radius: 62px;
@@ -223,6 +223,20 @@
 
 .page-three{
     height: 100vh;
+}
+
+.menu{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.menu img{
+    width: 70px;
+}
+
+.menu h2{
+    padding-top: 10px;
+    font-size: 15px;
 }
 
 
