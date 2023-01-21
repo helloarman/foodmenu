@@ -1,0 +1,231 @@
+
+/*  |---------------------------|
+    | SwiftMan by ARMAN RAHMAN  |
+    |---------------------------|  */
+
+:root{
+    --theme_bgcolor: #F3F3F3;
+    --theme_color: #463FAF;
+    --theme_colorlight: #5c55b4;
+    --theme_colordark: ;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hind Siliguri', sans-serif;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 1px;
+  }
+
+/* Mobile Responsive */
+
+/* Nav */
+@media only screen and (max-width: 600px) {
+
+    .nav-position{
+        height: 70px;
+        position: fixed;
+        z-index: 999;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top: 1px solid #E1E1E1;
+        padding-left: 4px;
+        padding-right: 4px;
+        padding-bottom: 0;
+    }
+
+    .nav-ul{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .nav-icon{
+        display: block;
+    }
+
+    .nav-text{
+        display: none;
+    }
+
+    .nav-pills .nav-link{
+        color: var(--theme_color);
+        size: 50px;
+    }
+
+    .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+        background-color: var(--theme_colorlight);
+        width: 55px;
+        height: 55px;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        transition: width 2s, height 2s, background-color 2s, transform 2s;
+    }
+
+    .nav-pills .nav-link.active, .nav-pills .show>.nav-link i{
+        padding-top: 20px;
+    }
+
+    .page-one{
+        background-color: #000;
+    }
+
+    .content{  
+        top: 80px;
+    }
+}
+
+/* Larger then Mobile Responsive */
+
+/* Nav  */
+@media only screen and (min-width: 600px) {
+    ul#pills-tab{
+        background-color: #fff;
+    }
+
+    .page{
+        margin-top: 70px;
+    }
+
+    ul{
+        background-color: red;
+    }
+
+    .nav-position{
+        height: 70px;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top: 1px solid #E1E1E1;
+        padding-left: 4px;
+        padding-right: 4px;
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    .nav-icon{
+        display: none;
+    }
+
+    .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+        background-color: var(--theme_color);
+        color: #fff;
+    }
+
+    .nav-pills .nav-link{
+        color: var(--theme_color);
+    }
+
+    .nav-text{
+        display: block;
+    }
+
+    .content{
+        top: 160px;
+    }
+}
+
+.page h1{
+    color: #fff;
+    text-align: center;
+    padding-top: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.page{
+    background-color: var(--theme_bgcolor);
+}
+
+.page .week{
+    background-color: var(--theme_color);
+    margin-top: 20px;
+    width: 80%;
+    color: #fff;
+    padding: 10px 10px;
+    text-align: center;
+    border-radius: 15px;
+    font-weight: 600;
+}
+
+.page .table-header{
+    margin-top: 20px;
+    color: #000;
+    text-align: center;
+    font-weight: 600;
+    height: 50px;
+    border-style: none;
+}
+
+.menu-table{
+    margin-top: 10px;
+    width: 80%;
+    text-align: center;
+}
+
+.background-theme{
+    background-color: var(--theme_color);
+    height: 200px;
+}
+
+.content{
+    background-color: #fff;
+    height: 100px;
+    width: 80%;
+    position: absolute;
+    height: 70%;
+    width: 80%;
+    border-radius: 30px;
+}
+
+.content-scroll{
+    overflow-x: hidden;
+}
+
+.content .content-title{
+    position: absolute;
+    bottom: -28px;
+    background-color: #463FAF;
+    height: 60px;
+    width: 250px;
+    border-radius: 62px;
+    
+}
+
+.content .content-title h2{
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    padding-top: 20px;
+}
+
+.page-one{
+    height: 100vh;
+}
+
+.page-two{
+    height: 100vh;
+}
+
+.page-three{
+    height: 100vh;
+}
+
+
+
+    
