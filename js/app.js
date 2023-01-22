@@ -3,6 +3,28 @@
 //         | SwiftMan by ARMAN RAHMAN  |
 //         |---------------------------| -->
 
+let icons = [
+    ['ভাত', 'rice.png'],
+    ['খিচুড়ি', 'khichuri.png'],
+    ['সবজি দিয়ে ছোট মাছ', 'small-fish.png'],
+    ['ভর্তা', 'vorta.png'],
+    ['মুরগী ভুনা', 'chicken.png'],
+    ['শাক/ভাজি/সবজি', 'vagitables.png'],
+    ['ভাজি/সবজি', 'vagitables.png'],
+    ['শাক/সবজি', 'vagitables.png'],
+    ['ভাজি/ডিম', 'vagitables.png'],
+    ['সবজি', 'vagitables.png'],
+    ['ডিম ভুনা', 'egg.png'],
+    ['মাছ', 'fish.png'],
+    ['পাঙ্গাস মাছ', 'fish,png'],
+    ['ডাল', 'dal.png'],
+    ['মুগডাল/বুটেরডাল', 'dal.png'],
+    ['চিকেন বিরিয়ানি', 'chickenbiriyani.png'],
+    ['সাদা পোলাও', 'polaw.png'],
+    ['গরুর গোস্তভুনা', 'meat.png'],
+    ['সালাদ/সবজি', 'salad.png'],
+]
+
 
 let data = [
     [   
@@ -60,12 +82,10 @@ function weekData(week){
     for(let i = 0; i < data[0].length; i++){
         items += `<tr><td>${data[0][i]}</td><td>${data[week][i]}</td></tr>`;
     }
-
     return items;
 }
 
 let fullTable = "";
-
 
 for(let j = 1; j < data.length; j++){
     if(j == 1){
@@ -105,25 +125,34 @@ document.querySelector("#tableData").innerHTML = fullTable;
 // Menu with Icon 
 
 function Icon(name){
-    let singleItem = `<div class="col-6 col-md-3 mt-5"> <div class="item">`;
-    if(name == "ভাত"){
-       singleItem += `
-            <img src="./images/menu/rice.png" alt="${name}">
+    let singleItem = "";
+    
+    for(let i = 0; i < icons.length; i++) {
+        if(icons[i][0] == name) {
+            singleItem += `<div class="col-6 col-md-3 mt-5"> <div class="item">
+            <img src="./images/menu/${icons[i][1]}" alt="${icons[i][0]}"><h2>${name}</h2> </div></div>
             `;
-    }else if(name == "সবজি দিয়ে ছোট মাছ"){
-        singleItem += `
-            <img src="./images/menu/fish.png" alt="${name}">
-            `;
-    }else if(name == "ডাল"){
-        singleItem += `
-            <img src="./images/menu/dal.png" alt="${name}">
-            `;
-    }else{
-        singleItem += `
-            <img src="./images/menu/dal.png" alt="${name}">
-            `;
+        }
+        console.log(singleItem);
     }
-    singleItem += `<h2>${name}</h2> </div></div>`;
+    
+    // if(name == "ভাত"){
+    //    singleItem += `
+    //         <img src="./images/menu/rice.png" alt="${name}">
+    //         `;
+    // }else if(name == "সবজি দিয়ে ছোট মাছ"){
+    //     singleItem += `
+    //         <img src="./images/menu/fish.png" alt="${name}">
+    //         `;
+    // }else if(name == "ডাল"){
+    //     singleItem += `
+    //         <img src="./images/menu/dal.png" alt="${name}">
+    //         `;
+    // }else{
+    //     singleItem += `
+    //         <img src="./images/menu/dal.png" alt="${name}">
+    //         `;
+    // }
 
     return singleItem;
 }
@@ -147,12 +176,10 @@ function todaymenu(){
 }
 let TodayMenu = todaymenu();
 
-let allItem = "";
-
 function allItems(findbyDay){
+    let allItem = "";
     for(var k=0; k<findbyDay.length; k++){
         allItem += Icon(findbyDay[k]);
-        console.log(findbyDay[k]);
     }
 
     return allItem;
@@ -166,11 +193,12 @@ function allItems(findbyDay){
  // tomorrow's Menu End
 
 function tomorrowmenu(){
-    const today = new Date()
-    const tomorrow = new Date(today)
+    const today = new Date();
+    const tomorrow = new Date(today);
     tomorrow.setDate(tomorrow.getDate()+1);
     let date = tomorrow.getDate();
     let _day = tomorrow.getDay(); 
+
     
     if(date <= 7){
         return data[1][_day];
@@ -182,9 +210,6 @@ function tomorrowmenu(){
         return data[4][_day];
     }
 }
-singleItem = "";
-let TomorrowsMenu = todaymenu();
-console.log(TomorrowsMenu);
-
+let TomorrowsMenu = tomorrowmenu();
 //  tomorrowmenu();
-//  document.querySelector('#tomorrowsMenu').innerHTML = allItems(TomorrowsMenu);
+ document.querySelector('#tomorrowsMenu').innerHTML = allItems(TomorrowsMenu);
