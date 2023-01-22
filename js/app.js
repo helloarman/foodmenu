@@ -16,7 +16,7 @@ let icons = [
     ['সবজি', 'vagitables.png'],
     ['ডিম ভুনা', 'egg.png'],
     ['মাছ', 'fish.png'],
-    ['পাঙ্গাস মাছ', 'fish,png'],
+    ['পাঙ্গাস মাছ', 'fish.png'],
     ['ডাল', 'dal.png'],
     ['মুগডাল/বুটেরডাল', 'dal.png'],
     ['চিকেন বিরিয়ানি', 'chickenbiriyani.png'],
