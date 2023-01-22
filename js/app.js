@@ -135,24 +135,6 @@ function Icon(name){
         }
         console.log(singleItem);
     }
-    
-    // if(name == "ভাত"){
-    //    singleItem += `
-    //         <img src="./images/menu/rice.png" alt="${name}">
-    //         `;
-    // }else if(name == "সবজি দিয়ে ছোট মাছ"){
-    //     singleItem += `
-    //         <img src="./images/menu/fish.png" alt="${name}">
-    //         `;
-    // }else if(name == "ডাল"){
-    //     singleItem += `
-    //         <img src="./images/menu/dal.png" alt="${name}">
-    //         `;
-    // }else{
-    //     singleItem += `
-    //         <img src="./images/menu/dal.png" alt="${name}">
-    //         `;
-    // }
 
     return singleItem;
 }
@@ -186,12 +168,9 @@ function allItems(findbyDay){
 }
 
  document.querySelector('#todaysMenu').innerHTML = allItems(TodayMenu);
-
-
 // Today's Menu End
 
  // tomorrow's Menu End
-
 function tomorrowmenu(){
     const today = new Date();
     const tomorrow = new Date(today);
@@ -211,5 +190,5 @@ function tomorrowmenu(){
     }
 }
 let TomorrowsMenu = tomorrowmenu();
-//  tomorrowmenu();
+
  document.querySelector('#tomorrowsMenu').innerHTML = allItems(TomorrowsMenu);
