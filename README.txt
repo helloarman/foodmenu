@@ -1,9 +1,11 @@
 
     //   <!--  |---------------------------|
-    //         | OnestFoodMenu by ARMAN RAHMAN  |
+    //         | FoodMenu by ARMAN RAHMAN  |
     //         |---------------------------| -->
 
-OnestFoodMenu is a Food Menu of a Company named Onest Tech. Besicly I made this for helping their stuff for informing them their menu. 
+FoodMenu is a Food Menu of a Company. I made this to help their staff by informing them of their menu. 
+
+Live Link: https://helloarman.github.io/foodmenu/
 
 Email: contact.armanrahman@gmail.com
 Website: https://armanrahman.info 
